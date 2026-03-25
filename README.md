@@ -31,7 +31,7 @@ client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect(("localhost", 9999))
 ```
 
-- Blok kode di atas digunakan untuk inisiasi socket client dengan meng-import model dan membuat client socket
+- Blok kode di atas digunakan untuk inisiasi socket client dengan meng-import library dan membuat client socket
 
 ```python
 while True: 
@@ -136,7 +136,7 @@ server.listen()
 print("[SERVER] waiting for connection...")
 ```
 
-- Blok kode di atas digunakan untuk inisiasi socket client dengan meng-import model dan membuat server socket.
+- Blok kode di atas digunakan untuk inisiasi socket client dengan meng-import library dan membuat server socket.
 
 ```python
 DIR = "server_files"
@@ -269,7 +269,7 @@ server.listen()
 print("[SERVER] waiting for connections...")
 ```
 
-- Blok kode di atas digunakan untuk inisiasi socket client dengan meng-import model dan membuat server socket.
+- Blok kode di atas digunakan untuk inisiasi socket client dengan meng-import library dan membuat server socket.
 
 ```python
 DIR = "server_files"
@@ -436,7 +436,7 @@ server.listen()
 print("[SERVER] waiting for connections...")
 ```
 
-- Blok kode di atas digunakan untuk inisiasi socket client dengan meng-import model dan membuat server socket.
+- Blok kode di atas digunakan untuk inisiasi socket client dengan meng-import library dan membuat server socket.
 
 ```python
 DIR = "server_files"
@@ -610,7 +610,7 @@ server.listen()
 print("[SERVER] waiting for connections...")
 ```
 
-- Blok kode di atas digunakan untuk inisiasi socket client dengan meng-import model dan membuat server socket.
+- Blok kode di atas digunakan untuk inisiasi socket client dengan meng-import library dan membuat server socket.
 
 ```python
 DIR = "server_files"
