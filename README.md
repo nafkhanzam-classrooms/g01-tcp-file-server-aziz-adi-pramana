@@ -730,3 +730,36 @@ while True:
 
 
 ## Screenshot Hasil
+
+### Hasil server-sync
+#### server
+![Screenshot](images/contoh.png)
+
+#### client 
+![Screenshot](images/contoh.png)
+
+### Hasil server select
+#### server 
+![Screenshot](images/contoh.png)
+
+#### client 
+![Screenshot](images/contoh.png)
+![Screenshot](images/contoh.png)
+
+### Hasil server Poll
+#### server 
+![Screenshot](images/contoh.png)
+
+#### client 
+
+### Hasil server-threads
+#### server 
+![Screenshot](images/contoh.png)
+
+#### client 
+![Screenshot](images/contoh.png)
+![Screenshot](images/contoh.png)
+
+
+
+
