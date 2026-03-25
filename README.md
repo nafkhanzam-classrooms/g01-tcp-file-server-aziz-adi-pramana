@@ -736,29 +736,34 @@ while True:
 ![](https://github.com/nafkhanzam-classrooms/g01-tcp-file-server-aziz-adi-pramana/blob/main/images/server-sys.png)
 
 #### client 
-![Screenshot](images/contoh.png)
+![](https://github.com/nafkhanzam-classrooms/g01-tcp-file-server-aziz-adi-pramana/blob/main/images/client-server-sys.png)
 
 ### Hasil server select
 #### server 
-![Screenshot](images/contoh.png)
+![Screenshot]([images/contoh.png](https://github.com/nafkhanzam-classrooms/g01-tcp-file-server-aziz-adi-pramana/blob/main/images/server-select.png))
 
 #### client 
-![Screenshot](images/contoh.png)
-![Screenshot](images/contoh.png)
+![Screenshot]([images/contoh.png](https://github.com/nafkhanzam-classrooms/g01-tcp-file-server-aziz-adi-pramana/blob/main/images/client1-server-select.png))
+
+![Screenshot]([images/contoh.png](https://github.com/nafkhanzam-classrooms/g01-tcp-file-server-aziz-adi-pramana/blob/main/images/client2-server-select.png))
 
 ### Hasil server Poll
 #### server 
 ![Screenshot](images/contoh.png)
 
 #### client 
+![Screenshot](images/contoh.png)
+
+![Screenshot](images/contoh.png)
+
 
 ### Hasil server-threads
 #### server 
-![Screenshot](images/contoh.png)
+![Screenshot]([images/contoh.png](https://github.com/nafkhanzam-classrooms/g01-tcp-file-server-aziz-adi-pramana/blob/main/images/server-threads.png))
 
 #### client 
-![Screenshot](images/contoh.png)
-![Screenshot](images/contoh.png)
+![Screenshot]([images/contoh.png](https://github.com/nafkhanzam-classrooms/g01-tcp-file-server-aziz-adi-pramana/blob/main/images/client1-server-threads.png))
+![Screenshot]([images/contoh.png](https://github.com/nafkhanzam-classrooms/g01-tcp-file-server-aziz-adi-pramana/blob/main/images/client2-server-select.png))
 
 
 
