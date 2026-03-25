@@ -753,12 +753,12 @@ while True:
 
 ### Hasil server Poll
 #### server 
-![Screenshot](images/contoh.png)
+![](https://github.com/nafkhanzam-classrooms/g01-tcp-file-server-aziz-adi-pramana/blob/main/images/server-poll.png)
 
 #### client 
-![Screenshot](images/contoh.png)
+![](https://github.com/nafkhanzam-classrooms/g01-tcp-file-server-aziz-adi-pramana/blob/main/images/client1-server-poll.png)
 
-![Screenshot](images/contoh.png)
+![](https://github.com/nafkhanzam-classrooms/g01-tcp-file-server-aziz-adi-pramana/blob/main/images/client2-server-poll.png)
 
 
 ### Hasil server-threads
