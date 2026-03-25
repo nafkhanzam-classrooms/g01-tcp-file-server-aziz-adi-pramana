@@ -15,106 +15,105 @@ Link ditaruh di bawah ini
 ## Penjelasan Program
 
 ### File: `client.py`
+```python
+import os 
+import socket 
 
-    ```python
-    import os 
-    import socket 
-    
-    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    client.connect(("localhost", 9999))
-    ```
-    
-    - Blok kode di atas digunakan untuk inisiasi socket client dengan meng-import model dan membuat client socket
-    
-    ```python
-    while True: 
-        command = input(">> ")
-    ```
-    
-    - Blok kode di atas berperan sebagai loop utama untuk menerima input dari user client yang akan dikirim atau disampaikan ke server
-    
-    ```python
-    if command.startswith("/upload"):
-        _, filename = command.split()
-    
-        if not os.path.exists(filename):
-            print("file not found")
-            continue
-    
-        client.send(command.encode())
-    
-        file_size = os.path.getsize(filename)
-        client.send(str(file_size).encode())
-    
-        with open(filename, "rb") as f:
-            while True:
-                data = f.read(1024)
-                if not data:
-                    break
-                client.send(data)
-    
-        response = client.recv(1024).decode()
+client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+client.connect(("localhost", 9999))
+```
+
+- Blok kode di atas digunakan untuk inisiasi socket client dengan meng-import model dan membuat client socket
+
+```python
+while True: 
+    command = input(">> ")
+```
+
+- Blok kode di atas berperan sebagai loop utama untuk menerima input dari user client yang akan dikirim atau disampaikan ke server
+
+```python
+if command.startswith("/upload"):
+    _, filename = command.split()
+
+    if not os.path.exists(filename):
+        print("file not found")
+        continue
+
+    client.send(command.encode())
+
+    file_size = os.path.getsize(filename)
+    client.send(str(file_size).encode())
+
+    with open(filename, "rb") as f:
+        while True:
+            data = f.read(1024)
+            if not data:
+                break
+            client.send(data)
+
+    response = client.recv(1024).decode()
+    print(response)
+```
+
+- Blok kode di atas berperan untuk menghadirkan feature `upload` agar user client dapat mengupload file ke server, yang kemudian akan disimpan di dalam folder server
+
+```python
+elif command.startswith("/download"):
+    client.send(command.encode())
+
+    response = client.recv(1024).decode()
+
+    if response == "FILE NOT FOUND":
         print(response)
-    ```
-    
-    - Blok kode di atas berperan untuk menghadirkan feature `upload` agar user client dapat mengupload file ke server, yang kemudian akan disimpan di dalam folder server
-    
-    ```python
-    elif command.startswith("/download"):
-        client.send(command.encode())
-    
-        response = client.recv(1024).decode()
-    
-        if response == "FILE NOT FOUND":
-            print(response)
-            continue
-    
-        file_size = int(response)
-    
-        _, filename = command.split()
-        with open(filename, "wb") as f:
-            received = 0
-            while received < file_size:
-                data = client.recv(1024)
-                f.write(data)
-                received += len(data)
-    
-        print("Download selesai")
-    ```
-    
-    - Blok kode di atas berperan untuk menghadirkan feature `download` agar user client dapat mendownload file file yang ada di dalam folder server
-    
-    ```python
-    elif command.startswith("/list"):
-        client.send(command.encode())
-        response = client.recv(4096).decode()
-        print("Files di server:")
-        print(response)
-    ```
-    
-    - Blok kode di atas berperan untuk menghadirkan feature `list` agar user client dapat melihat apa saja isi file di dalam folder server
-    
-    ```python
-    elif command == "exit":
-        break
-    ```
-    
-    - Kode di atas berperan untuk user client memutuskan hubungan atau connection dengan server
-    
-    ```python
-    else:
-        client.send(command.encode())
-        response = client.recv(4096).decode()
-        print(response)
-    ```
-    
-    - Kode di atas digunakan apabila user mengetikkan command selain 3 command di atas (`/list`, `/download`, `/upload`), di sisi server nanti client akan diberikan sebuah test berupa `UNKNOWN COMMAND`
-    
-    ```python
-    client.close
-    ```
-    
-    - Kode di atas untuk koneksi TCP server
+        continue
+
+    file_size = int(response)
+
+    _, filename = command.split()
+    with open(filename, "wb") as f:
+        received = 0
+        while received < file_size:
+            data = client.recv(1024)
+            f.write(data)
+            received += len(data)
+
+    print("Download selesai")
+```
+
+- Blok kode di atas berperan untuk menghadirkan feature `download` agar user client dapat mendownload file file yang ada di dalam folder server
+
+```python
+elif command.startswith("/list"):
+    client.send(command.encode())
+    response = client.recv(4096).decode()
+    print("Files di server:")
+    print(response)
+```
+
+- Blok kode di atas berperan untuk menghadirkan feature `list` agar user client dapat melihat apa saja isi file di dalam folder server
+
+```python
+elif command == "exit":
+    break
+```
+
+- Kode di atas berperan untuk user client memutuskan hubungan atau connection dengan server
+
+```python
+else:
+    client.send(command.encode())
+    response = client.recv(4096).decode()
+    print(response)
+```
+
+- Kode di atas digunakan apabila user mengetikkan command selain 3 command di atas (`/list`, `/download`, `/upload`), di sisi server nanti client akan diberikan sebuah test berupa `UNKNOWN COMMAND`
+
+```python
+client.close
+```
+
+- Kode di atas untuk koneksi TCP server
 
 ### `server-sync.py`
 
