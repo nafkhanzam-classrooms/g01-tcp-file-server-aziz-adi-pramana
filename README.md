@@ -19,6 +19,10 @@ https://youtu.be/Ie6z3yvMEPA
 - `server-select.py` : merupakan file server menggunakan skema select
 - `server-poll.py` : merupakan file server menggunakan skema poll
 - `server-thread.py` : merupakan file server menggunakan skema thread
+- `icon.jpg:` aset file
+- `waifu.jfif:` aset file
+- `document.txt:` aset file
+
 
 ## Penjelasan Program
 
