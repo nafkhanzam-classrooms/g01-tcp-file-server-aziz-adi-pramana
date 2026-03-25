@@ -14,7 +14,7 @@ Link ditaruh di bawah ini
 
 ## Penjelasan Program
 
-## `client.py`
+### `client.py`
 
 ```python
 import os 
@@ -116,7 +116,7 @@ client.close
 
 - Kode di atas untuk koneksi TCP server
 
-## `server-sync.py`
+### `server-sync.py`
 
 ```python
 import socket 
@@ -248,7 +248,7 @@ server.close()
 
 - Kode di atas untuk menutup  socket server
 
-## `server-select.py`
+### `server-select.py`
 
 ```python
 import socket
@@ -415,7 +415,7 @@ for notified_socket in exception_sockets:
     - Socket ini langsung dihapus dan ditutup.
     - Menjaga agar server tetap stabil dan tidak crash karena socket bermasalah.
 
-## `server-poll.py`
+### `server-poll.py`
 
 ```python
 import socket
@@ -589,7 +589,7 @@ else:
 - Menghapus socket dari poller, dictionary, dan menutup socket.
 - Memastikan server tetap stabil saat socket bermasalah.
 
-## `server-thread.py`
+### `server-thread.py`
 
 ```python
 import socket
