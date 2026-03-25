@@ -733,7 +733,7 @@ while True:
 
 ### Hasil server-sync
 #### server
-![]([images/contoh.png](https://github.com/nafkhanzam-classrooms/g01-tcp-file-server-aziz-adi-pramana/blob/main/images/server-sys.png))
+![](https://github.com/nafkhanzam-classrooms/g01-tcp-file-server-aziz-adi-pramana/blob/main/images/server-sys.png)
 
 #### client 
 ![Screenshot](images/contoh.png)
