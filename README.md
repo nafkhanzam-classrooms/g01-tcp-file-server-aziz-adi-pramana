@@ -12,6 +12,14 @@ Link ditaruh di bawah ini
 
 ```
 
+#### Deskripsi File
+
+- `client.py` : merupakan file client
+- `server-sync.py` : merupakan file server menggunakan skema sinkronus
+- `server-select.py` : merupakan file server menggunakan skema select
+- `server-poll.py` : merupakan file server menggunakan skema poll
+- `server-thread.py` : merupakan file server menggunakan skema thread
+
 ## Penjelasan Program
 
 ### File: `client.py`
